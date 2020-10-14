@@ -1,0 +1,50 @@
+    <h2>My Heroes</h2>
+
+
+    <ul class = "heroes">
+      <!--let heros allows reference of each item (hero) and bind to html -->
+      <!--Adding a click handler -->
+      <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+      </li>
+    </ul>
+
+  
+
+
+      <!--Comments
+        --
+        --
+        --
+      -->
+
+<!--
+  Html does not load without *ngIf="selectedHero" waits for value to change
+  Logic is moved to heros-details file
+
+  <div *ngIf="selectedHero">
+    <h2>{{ selectedHero.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{ selectedHero.id }}</div>
+  </div>
+-->
+
+<!--Displaying Hero name and id
+
+  <div>
+    <span>
+      id:
+    </span>
+      {{ hero.id }}
+  </div>
+
+  <div>
+    <span>
+      name:
+    </span>
+    Using the angular pipe operator.. Using Transform option of pipe {uppercase}
+     {{ hero.name | uppercase }}
+  </div>
+
+-->
