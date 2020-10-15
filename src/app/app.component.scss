@@ -1,31 +1,55 @@
 /* Application-wide Styles */
 
-// Application title
-$heading-font:    Helvetica, sans-serif;
-$heading-color: #99a832;
-$heading-text: center;
+//Primary SCSS
+$primary-color: #3ca0e7;
+$secondary-color: #A9A9A9;
+$text-align: center;
 
+// Application title
+$heading-font: Helvetica, sans-serif, 100%;
+$heading-size: 250%;
+
+
+//Navigation SCSS
+$nav-list: none;
+$nav-margin: 0 auto;
+$nav-border: 2px solid;
+$nav-display: inline-block;
+$nav-padding: 0 30px;
+$nav-position: relative;
+$nav-decoration: none;
+$nav-font: arvo;
+$nav-cursor: pointer;
 
 h1 {
-  font: 100% $heading-font;
-  color: $heading-color;
-  font-size: 250%;
-  text-align: $heading-text;
+  font: $heading-font;
+  color: $primary-color;
+  font-size: $heading-size;
+  text-align: $text-align;
 }
 
+nav{
+    text-align: $text-align;
+  ul li {
+          list-style: $nav-list;
+          margin: $nav-margin;
+          border-left: $nav-border $primary-color;
+          display: $nav-display;
+          padding: $nav-padding;
+          position: $nav-position;
+          text-decoration: $nav-decoration;
+          text-align: $text-align;
+          font-family: arvo;
+        }
+    li a {
+          color: $secondary-color;
+          &:hover {
+            color: $primary-color;
+            cursor: $nav-cursor;
+          }
+        }
+}
 
-h2, h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-}
-body {
-  margin: 2em;
-}
-body, input[type="text"], button {
-  color: #333;
-  font-family: Cambria, Georgia;
-}
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;
